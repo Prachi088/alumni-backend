@@ -5,7 +5,6 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<!-- FIXED: 4.0.5 does not exist, use 3.2.5 -->
 		<version>3.2.5</version>
 		<relativePath/>
 	</parent>
@@ -14,13 +13,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<java.version>17</java.version>
+		<lombok.version>1.18.30</lombok.version>   <!-- ✅ ADD THIS -->
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		<!-- FIXED: was spring-boot-starter-webmvc (wrong), should be spring-boot-starter-web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -35,7 +34,6 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- FIXED: was spring-boot-starter-data-jpa-test and spring-boot-starter-webmvc-test (fake artifacts) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -70,6 +68,7 @@
 								<path>
 									<groupId>org.projectlombok</groupId>
 									<artifactId>lombok</artifactId>
+									<version>${lombok.version}</version>   <!-- ✅ ADD THIS -->
 								</path>
 							</annotationProcessorPaths>
 						</configuration>
@@ -83,6 +82,7 @@
 								<path>
 									<groupId>org.projectlombok</groupId>
 									<artifactId>lombok</artifactId>
+									<version>${lombok.version}</version>   <!-- ✅ ADD THIS -->
 								</path>
 							</annotationProcessorPaths>
 						</configuration>
