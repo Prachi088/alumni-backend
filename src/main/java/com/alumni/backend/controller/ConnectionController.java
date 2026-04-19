@@ -111,6 +111,7 @@ public class ConnectionController {
 
             Map<String, Object> data = new HashMap<>();
             data.put("id", c.getId());
+            data.put("userId", otherUserId);
 
             if (userOpt.isPresent()) {
                 User user = userOpt.get();
